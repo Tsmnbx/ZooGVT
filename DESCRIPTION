@@ -7,9 +7,14 @@ Authors@R:
            role = c("aut", "cre"),
            email = "joshua.business.81@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: The ZooGVT package allows analysis and comparision between different speices of animals and their genes.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Suggests: 
+    testthat
+Imports: 
+    BgeeDB,
+    seqinr

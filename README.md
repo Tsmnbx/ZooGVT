@@ -34,9 +34,27 @@ library(ZooGVT)
 ## basic example code
 ```
 
-``` r
-Acknowledgements
-```
+## Contributions
+
+The *ListSpecies* Function uses the BgeeDB package
+
+## References
+
+Komljenovic A, Roux J, Robinson-Rechavi M, and Bastian F (2016). BgeeDB,
+an R package for retrieval of curated expression datasets and for gene
+list enrichment tests. F1000Research
+
+Bastian F et al. (2008). Bgee: Integrating and Comparing Heterogeneous
+Transcriptome Data Among Species. Data Integration Life Sci. Lecture
+Notes in Computer Science, 5109, 124-31
+
+Charif, D. and Lobry, J.R. (2007)
+
+Martin Morgan (2019). BiocManager: Access the Bioconductor Project
+Package Repository. R package version 1.30.10.
+<https://CRAN.R-project.org/package=BiocManager>
+
+## Acknowledgements
 
 This package was developed as part of an assessment for 2020 BCB410H:
 Applied Bioinformatics, University of Toronto, Toronto,CANADA.
