@@ -7,16 +7,9 @@
 
 <!-- badges: end -->
 
-The goal of ZooGVT is to …
+The goal of ZooGVT is to Understand genome data in the context of anatomical features
 
 ## Installation
-
-You can install the released version of ZooGVT from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("ZooGVT")
-```
 
 And the development version from [GitHub](https://github.com/) with:
 
