@@ -22,7 +22,9 @@ Imports:
     seqinr,
     BiocManager,
     biomaRt,
-    fmsb
+    fmsb,
+    topGO,
+    shiny
 VignetteBuilder: knitr
 Depends: 
     R (>= 2.10)

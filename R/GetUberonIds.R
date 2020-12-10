@@ -19,6 +19,7 @@
 #'
 #' @import BgeeDB
 #' @import biomaRt
+#' @import topGO
 #' @importFrom utils head
 GetUberonIds<-function(speciesBgee, speciesCommon, feature){
   dataframe<-data.frame(row.names=1:1)
@@ -31,7 +32,7 @@ GetUberonIds<-function(speciesBgee, speciesCommon, feature){
 
   topObject<-TopObj(topData, geneList)
   print("After topObj")
-  results <- runTest(topObject, algorithm = 'weight', statistic = 'fisher')
+  results <- topGO::runTest(topObject, algorithm = 'weight', statistic = 'fisher')
   table<- Table(topData, topObject, results)
 
   dataFrame<-cbind(table$organId,table$organName)

@@ -20,6 +20,7 @@
 #' @import fmsb
 #' @import BgeeDB
 #' @import biomaRt
+#' @import topGO
 #' @importFrom utils head
 
 GenesFromAnatomy<-function(speciesBgee, speciesCommon, feature){
@@ -34,7 +35,7 @@ GenesFromAnatomy<-function(speciesBgee, speciesCommon, feature){
 
   topObject<-TopObj(topData, geneList)
   print("After topObj")
-  results <- runTest(topObject, algorithm = 'weight', statistic = 'fisher')
+  results <- topGO::runTest(topObject, algorithm = 'weight', statistic = 'fisher')
   table<- Table(topData, topObject, results)
   for (i in seq_along(table$annotated)){
 
