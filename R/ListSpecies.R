@@ -6,6 +6,7 @@
 #' @export
 #'
 #' @examples
+#' List<-ListSpecies()
 ListSpecies<-function(){
   ID <- BgeeDB::listBgeeSpecies()["ID"]
   GENUS <- BgeeDB::listBgeeSpecies()["GENUS"]

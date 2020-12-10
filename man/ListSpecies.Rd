@@ -12,3 +12,6 @@ A list of species
 \description{
 Show all The animals available from BgeeDB
 }
+\examples{
+List<-ListSpecies()
+}
