@@ -1,28 +1,24 @@
-
-#' Create a radar graph of anatomical features and their genes
-#'
-#' This function takes a species from BgeeDB and creates a Radar graph that
-#' displays the number of genes along with the anatomica features
+#' Title
 #'
 #' @param speciesBgee The Scientific name of a Species found in BgeeDB
 #' @param speciesCommon The common name of the same species in Ensemble
-#' @param feature The feature, an adjective that describes what we want to find in the
-#'        anatomical features for and how many genes we have for them
+#' @param feature The feature, an adjective that describes what we want
+#'               to find in the anatomical features for and how many
+#'               genes we have for them
 #'
-#' @return a radar graph that shows the terms and how many genes we find per term
+#' @return A Dataframe with two columns one with the UBERONIds and the other
+#'         with the Anatomical feature they correspond to
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#'AnatomyGeneRadarGraph <-GenesFromAnatomy("Danio_rerio","Zebrafish","pectoral fin")
-#'}
-#' @import fmsb
+#' IdDataFrame<-GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
+#' }
+#'
 #' @import BgeeDB
 #' @import biomaRt
 #' @importFrom utils head
-
-GenesFromAnatomy<-function(speciesBgee, speciesCommon, feature){
-  print("May take a while there is a lot of information that needs to be downloaded first")
+GetUberonIds<-function(speciesBgee, speciesCommon, feature){
   dataframe<-data.frame(row.names=1:1)
   topData<-TopData(speciesBgee)
   print(speciesBgee)
@@ -35,25 +31,14 @@ GenesFromAnatomy<-function(speciesBgee, speciesCommon, feature){
   print("After topObj")
   results <- runTest(topObject, algorithm = 'weight', statistic = 'fisher')
   table<- Table(topData, topObject, results)
-  for (i in seq_along(table$annotated)){
 
-    organData<-data.frame(c(table$annotated[i]))
-    colnames(organData) <- c(table$organName[i])
-    print(organData)
-    dataframe<-cbind(dataframe, organData)
-    print("total anno loop added")
-    print(table$organName)
-  }
-
-  print("graph stuff")
-  max<-max(dataframe[1,])
-  min<-min(dataframe[1,])
-  rowLength<-length(dataframe[1,])
-  radData <- rbind(rep(max,rowLength) , rep(min,rowLength) , dataframe)
-  graph<- fmsb::radarchart(radData)
-  return(graph)
-
+  dataFrame<-cbind(table$organId,table$organName)
+  colnames(dataFrame)<-c("UBERONids","AnatFeature")
+  return(dataFrame)
 }
+
+
+
 
 
 
@@ -284,6 +269,5 @@ CreateGeneList<-function(name, feature){
   summary(geneList)
   return(geneList)
 }
-
 
 

@@ -12,7 +12,7 @@ GenesFromAnatomy(speciesBgee, speciesCommon, feature)
 \item{speciesCommon}{The common name of the same species in Ensemble}
 
 \item{feature}{The feature, an adjective that describes what we want to find in the
-antomical features for and how many genes we have for them}
+anatomical features for and how many genes we have for them}
 }
 \value{
 a radar graph that shows the terms and how many genes we find per term
