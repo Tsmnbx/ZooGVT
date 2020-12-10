@@ -41,17 +41,55 @@ This is a basic example which shows the UBERONids on could get for a Zebra fish 
 
 ```{r example}
 library(ZooGVT)
+#BiocManager::install("topGO")
 
-#IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
+IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
+IdDataFrame
 ```
 
 
 
 
-```{r pressure, echo = FALSE}
+Here is the package structure
 
-```
 
+├── DESCRIPTION
+├── Danio_rerio_Bgee_14_1
+│   ├── topAnat_AnatEntitiesNames_7955.tsv
+│   ├── topAnat_AnatEntitiesRelationships_7955.tsv
+│   └── topAnat_GeneToAnatEntities_7955_PRESENCESILVER.tsv
+├── LICENSE
+├── LICENSE.md
+├── NAMESPACE
+├── R
+│   ├── GenesFromAnatomy.R
+│   ├── GetUberonIds.R
+│   ├── ListSpecies.R
+│   └── data.R
+├── README.Rmd
+├── README.md
+├── ZooGVT.Rproj
+├── data
+│   └── phyenotypeDescriptions.rda
+├── inst
+│   └── shiny-scripts
+│       └── app.R
+├── man
+│   ├── GenesFromAnatomy.Rd
+│   ├── GetUberonIds.Rd
+│   ├── ListSpecies.Rd
+│   ├── figures
+│   │   └── README-pressure-1.png
+│   └── phyenotypeDescriptions.Rd
+├── release.tsv
+├── species_Bgee_14_1.tsv
+├── tests
+│   ├── testthat
+│   │   ├── release.tsv.tmp
+│   │   └── test-ListSpecies.R
+│   └── testthat.R
+└── vignettes
+    └── Introduction_ZooGVT.Rmd
 
 
 

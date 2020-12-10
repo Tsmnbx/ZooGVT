@@ -37,9 +37,166 @@ Zebra fish with the descriptor “pectoral fin”:
 ``` r
 library(ZooGVT)
 #> 
+#BiocManager::install("topGO")
 
-#IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
+IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
+#> 
+#> NOTE: You did not specify any data type. The argument dataType will be set to c("rna_seq","affymetrix","est","in_situ") for the next steps.
+#> 
+#> Querying Bgee to get release information...
+#> 
+#> NOTE: the file describing Bgee species information for release 14_1 was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT. Data will not be redownloaded.
+#> 
+#> API key built: 38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f
+#> 
+#> NOTE: an organ relationships file was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1. Data will not be redownloaded.
+#> 
+#> NOTE: an organ names file was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1. Data will not be redownloaded.
+#> 
+#> NOTE: a gene to organs mapping file was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1. Data will not be redownloaded.
+#> 
+#> Parsing the results.............................................
+#> 
+#> Adding BGEE:0 as unique root of all terms of the ontology.......
+#> 
+#> Done.
+#> [1] "Danio_rerio"
+#> [1] "drerio_gene_ensembl"
+#> ENSDARG00000020201 ENSDARG00000012892 ENSDARG00000008788 ENSDARG00000013174 
+#>                  0                  0                  0                  0 
+#> ENSDARG00000021899 ENSDARG00000037429 
+#>                  0                  0 
+#> Levels: 0 1
+#> 
+#> Checking topAnatData object.............
+#> 
+#> Checking gene list......................
+#> 
+#> WARNING: Some genes in your gene list have no expression data in Bgee, and will not be included in the analysis. 4008 genes in background will be kept.
+#> 
+#> Building most specific Ontology terms...  (  1191  Ontology terms found. )
+#> 
+#> Building DAG topology...................  (  2055  Ontology terms and  3917  relations. )
+#> 
+#> Attaching package: 'SparseM'
+#> The following object is masked from 'package:base':
+#> 
+#>     backsolve
+#> 
+#> Annotating nodes (Can be long)..........  (  4008  genes annotated to the Ontology terms. )
+#> [1] "After topObj"
+#> 
+#>           -- Weight Algorithm -- 
+#> 
+#>       The algorithm is scoring 1020 nontrivial nodes
+#>       parameters: 
+#>           test statistic: fisher : ratio
+#> 
+#>   Level 27:  1 nodes to be scored.
+#> 
+#>   Level 26:  2 nodes to be scored.
+#> 
+#>   Level 25:  2 nodes to be scored.
+#> 
+#>   Level 24:  4 nodes to be scored.
+#> 
+#>   Level 23:  4 nodes to be scored.
+#> 
+#>   Level 22:  6 nodes to be scored.
+#> 
+#>   Level 21:  4 nodes to be scored.
+#> 
+#>   Level 20:  8 nodes to be scored.
+#> 
+#>   Level 19:  24 nodes to be scored.
+#> 
+#>   Level 18:  22 nodes to be scored.
+#> 
+#>   Level 17:  27 nodes to be scored.
+#> 
+#>   Level 16:  43 nodes to be scored.
+#> 
+#>   Level 15:  68 nodes to be scored.
+#> 
+#>   Level 14:  63 nodes to be scored.
+#> 
+#>   Level 13:  76 nodes to be scored.
+#> 
+#>   Level 12:  97 nodes to be scored.
+#> 
+#>   Level 11:  120 nodes to be scored.
+#> 
+#>   Level 10:  114 nodes to be scored.
+#> 
+#>   Level 9:   91 nodes to be scored.
+#> 
+#>   Level 8:   75 nodes to be scored.
+#> 
+#>   Level 7:   67 nodes to be scored.
+#> 
+#>   Level 6:   44 nodes to be scored.
+#> 
+#>   Level 5:   27 nodes to be scored.
+#> 
+#>   Level 4:   20 nodes to be scored.
+#> 
+#>   Level 3:   6 nodes to be scored.
+#> 
+#>   Level 2:   4 nodes to be scored.
+#> 
+#>   Level 1:   1 nodes to be scored.
+#> 
+#> Building the results table for the 29 significant terms at FDR threshold of 0.01...
+#> Ordering results by pValue column in increasing order...
+#> Done
+IdDataFrame
+#>       UBERONids        AnatFeature                      
+#>  [1,] "UBERON:0000151" "pectoral fin"                   
+#>  [2,] "UBERON:0004357" "paired limb/fin bud"            
+#>  [3,] "UBERON:2000040" "median fin fold"                
+#>  [4,] "UBERON:0003051" "ear vesicle"                    
+#>  [5,] "UBERON:0003933" "cranial cartilage"              
+#>  [6,] "UBERON:0005729" "pectoral appendage field"       
+#>  [7,] "UBERON:0003406" "cartilage of respiratory system"
+#>  [8,] "UBERON:0004376" "fin bone"                       
+#>  [9,] "UBERON:0001042" "chordate pharynx"               
+#> [10,] "UBERON:0003108" "suspensorium"                   
+#> [11,] "UBERON:0002539" "pharyngeal arch"                
+#> [12,] "UBERON:0004756" "dermal skeletal element"        
+#> [13,] "UBERON:0003128" "cranium"                        
+#> [14,] "UBERON:0006068" "bone of tail"                   
+#> [15,] "UBERON:0004375" "bone of free limb or fin"       
+#> [16,] "UBERON:0008895" "splanchnocranium"               
+#> [17,] "UBERON:0000089" "hypoblast (generic)"            
+#> [18,] "UBERON:0010312" "immature eye"                   
+#> [19,] "UBERON:0001003" "skin epidermis"                 
+#> [20,] "UBERON:0000926" "mesoderm"                       
+#> [21,] "UBERON:0002514" "intramembranous bone"           
+#> [22,] "UBERON:0002616" "regional part of brain"         
+#> [23,] "UBERON:0010363" "endochondral element"           
+#> [24,] "UBERON:4000163" "anal fin"                       
+#> [25,] "UBERON:2000555" "opercular flap"                 
+#> [26,] "UBERON:4000170" "median fin skeleton"            
+#> [27,] "UBERON:0002541" "germ ring"                      
+#> [28,] "UBERON:2007029" "hindbrain neural keel"          
+#> [29,] "UBERON:2007031" "anterior neural rod"
 ```
+
+Here is the package structure
+
+├── DESCRIPTION ├── Danio\_rerio\_Bgee\_14\_1 │ ├──
+topAnat\_AnatEntitiesNames\_7955.tsv │ ├──
+topAnat\_AnatEntitiesRelationships\_7955.tsv │ └──
+topAnat\_GeneToAnatEntities\_7955\_PRESENCESILVER.tsv ├── LICENSE ├──
+LICENSE.md ├── NAMESPACE ├── R │ ├── GenesFromAnatomy.R │ ├──
+GetUberonIds.R │ ├── ListSpecies.R │ └── data.R ├── README.Rmd ├──
+README.md ├── ZooGVT.Rproj ├── data │ └── phyenotypeDescriptions.rda ├──
+inst │ └── shiny-scripts │ └── app.R ├── man │ ├── GenesFromAnatomy.Rd │
+├── GetUberonIds.Rd │ ├── ListSpecies.Rd │ ├── figures │ │ └──
+README-pressure-1.png │ └── phyenotypeDescriptions.Rd ├── release.tsv
+├── species\_Bgee\_14\_1.tsv ├── tests │ ├── testthat │ │ ├──
+release.tsv.tmp │ │ └── test-ListSpecies.R │ └── testthat.R └──
+vignettes └── Introduction\_ZooGVT.Rmd
 
 ## Contributions
 
