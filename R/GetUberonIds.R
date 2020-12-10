@@ -1,5 +1,7 @@
 #' Title
 #'
+#'@source \url{http://bioconductor.org/packages/release/bioc/vignettes/BgeeDB/inst/doc/BgeeDB_Manual.html}
+#'
 #' @param speciesBgee The Scientific name of a Species found in BgeeDB
 #' @param speciesCommon The common name of the same species in Ensemble
 #' @param feature The feature, an adjective that describes what we want

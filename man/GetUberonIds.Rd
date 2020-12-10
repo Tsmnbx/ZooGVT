@@ -3,6 +3,9 @@
 \name{GetUberonIds}
 \alias{GetUberonIds}
 \title{Title}
+\source{
+\url{http://bioconductor.org/packages/release/bioc/vignettes/BgeeDB/inst/doc/BgeeDB_Manual.html}
+}
 \usage{
 GetUberonIds(speciesBgee, speciesCommon, feature)
 }

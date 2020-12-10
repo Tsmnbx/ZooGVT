@@ -3,6 +3,7 @@
 #'
 #' This function takes a species from BgeeDB and creates a Radar graph that
 #' displays the number of genes along with the anatomica features
+#' @source \url{http://bioconductor.org/packages/release/bioc/vignettes/BgeeDB/inst/doc/BgeeDB_Manual.html}
 #'
 #' @param speciesBgee The Scientific name of a Species found in BgeeDB
 #' @param speciesCommon The common name of the same species in Ensemble

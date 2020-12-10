@@ -3,6 +3,9 @@
 \name{GenesFromAnatomy}
 \alias{GenesFromAnatomy}
 \title{Create a radar graph of anatomical features and their genes}
+\source{
+\url{http://bioconductor.org/packages/release/bioc/vignettes/BgeeDB/inst/doc/BgeeDB_Manual.html}
+}
 \usage{
 GenesFromAnatomy(speciesBgee, speciesCommon, feature)
 }
