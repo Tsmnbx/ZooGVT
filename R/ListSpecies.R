@@ -2,16 +2,13 @@
 #'
 #'
 #'
-#' @return A list of species
+#' @return A list of species that currently work with this package, they have phenotype descriptions
+#' in ensemble but also are in the BgeeDB database of species both are required for this to work
 #' @export
 #'
 #' @examples
 #' List<-ListSpecies()
 ListSpecies<-function(){
-  ID <- BgeeDB::listBgeeSpecies()["ID"]
-  GENUS <- BgeeDB::listBgeeSpecies()["GENUS"]
-  SPECIES_NAME <- BgeeDB::listBgeeSpecies()["SPECIES_NAME"]
-  SpeciesList <- cbind(ID, GENUS, SPECIES_NAME)
-  return(SpeciesList)
+  return(ZooGVT::Species)
 }
 

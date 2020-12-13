@@ -1,5 +1,4 @@
-test_that("List SPECIES NAME is Column", {
-  SPECIES_NAME <- BgeeDB::listBgeeSpecies()["SPECIES_NAME"]
+test_that("List of Speices matches the data", {
   X<-ListSpecies()
-  expect_identical(X["SPECIES_NAME"],SPECIES_NAME)
+  expect_identical(X[1],Species[1])
 })

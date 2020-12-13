@@ -51,9 +51,8 @@ IdDataFrame
 
 
 Here is the package structure
-
-
-├── DESCRIPTION
+```{r include = FALSE}
+print("├── DESCRIPTION
 ├── Danio_rerio_Bgee_14_1
 │   ├── topAnat_AnatEntitiesNames_7955.tsv
 │   ├── topAnat_AnatEntitiesRelationships_7955.tsv
@@ -89,7 +88,11 @@ Here is the package structure
 │   │   └── test-ListSpecies.R
 │   └── testthat.R
 └── vignettes
-    └── Introduction_ZooGVT.Rmd
+    └── Introduction_ZooGVT.Rmd"
+)
+```
+
+
 
 
 

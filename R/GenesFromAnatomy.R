@@ -21,6 +21,7 @@
 #' @import BgeeDB
 #' @import biomaRt
 #' @import topGO
+#' @import grDevices
 #' @importFrom utils head
 
 GenesFromAnatomy<-function(speciesBgee, speciesCommon, feature){
@@ -52,7 +53,20 @@ GenesFromAnatomy<-function(speciesBgee, speciesCommon, feature){
   min<-min(dataframe[1,])
   rowLength<-length(dataframe[1,])
   radData <- rbind(rep(max,rowLength) , rep(min,rowLength) , dataframe)
-  graph<- fmsb::radarchart(radData)
+  r<- sample(0:1, 1)
+  g<- sample(0:1, 1)
+  b<- sample(0:1, 1)
+  graph<- fmsb::radarchart(radData,
+
+                           #custom polygon
+                           pcol=grDevices::rgb(r,g,b,0.9) , pfcol=grDevices::rgb(r,g,b,0.5), plwd=4 ,
+
+                           #custom the grid
+                           cglcol="grey", cglty=1, axislabcol="grey", caxislabels=seq(0,max,100), cglwd=0.8,
+
+                           #custom labels
+                           vlcex=0.8
+  )
   return(graph)
 
 }
