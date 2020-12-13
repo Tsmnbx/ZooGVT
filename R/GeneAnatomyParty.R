@@ -9,6 +9,11 @@
 #' @examples
 #' \dontrun{
 #'GeneAnatomyParty("Danio_rerio","Zebrafish","pectoral fin")
+#'ListofAnimals<-c("Zebrafish","Human")
+#'GeneAnatomyParty(ListofAnimals,"blood")
+#'
+#'
+#'
 #'}
 #' @import fmsb
 #' @import BgeeDB

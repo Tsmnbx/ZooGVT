@@ -1,19 +1,60 @@
 ---
 title: "Introduction_ZooGVT"
-output: rmarkdown::html_vignette
+author: "Joshua Efe"
+output: 
+  rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Introduction_ZooGVT}
+  %\VignetteIndexEntry{A tour of ZooGVT}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
+library(knitr)
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
+
+
 ```{r setup}
 library(ZooGVT)
+```
+
+Here we show the ubronIDS for the phenotype descriptions that we can find for pectoral fin in the zebra Fish
+
+```{r}
+IdDataFrame<-GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
+IdDataFrame
+```
+
+
+To see what Species we can use for this package that are both in BgeeDB and have phenotype descriptions in  ensembl as both are required run ListSpecies()
+```{r}
+
+ListSpecies()
+```
+
+
+To see what phenotype descriptions from ensembl are available and what could be used for the feature parameter run ListPhenotypesDescriptions()
+```{r}
+
+ListPhenotypesDescriptions()
+```
+
+
+Lets do an example of a species
+In the code below we ran GenesFromAnatomy to get a radar graph of the number of genes we get for the phenotype descriptions of a feature
+```{r}
+
+AnatomyGeneRadarGraph <-GenesFromAnatomy("Danio_rerio","Zebrafish","pectoral fin")
+```
+
+Here we ran the GeneAnatomyParty to get multiple graphs for the different species for the same feature. Its tricky you have to have an feature that is just precise enough to get good results
+```{r eval=FALSE}
+
+ListofAnimals<-c("Zebrafish","Human")
+GeneAnatomyParty(ListofAnimals,"Cardiac")
 ```

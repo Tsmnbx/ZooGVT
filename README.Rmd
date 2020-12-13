@@ -46,8 +46,10 @@ library(ZooGVT)
 IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 IdDataFrame
 ```
-
-
+To run the Shiny app
+```{r eval=FALSE}
+runZooGVT()
+```
 
 
 Here is the package structure
@@ -133,7 +135,12 @@ Bioinformatics 21, 3439-3440 (2005).
   with some Demographic Data. R package version 0.7.0.
   https://CRAN.R-project.org/package=fmsb
 
+“Learn Shiny.” Shiny, shiny.rstudio.com/tutorial/.
 
+Holtz, Yan. “Basic Radar Chart.” – The R Graph Gallery, www.r-graph-gallery.com/142-basic-radar-chart.html.
+
+
+Holtz, Yan. “Basic Radar Chart.” – The R Graph Gallery, www.r-graph-gallery.com/142-basic-radar-chart.html.
 
 ## Acknowledgements
 

@@ -45,28 +45,15 @@ IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> 
 #> Querying Bgee to get release information...
 #> 
-#> Building URL to query species in Bgee release 14_1...
+#> NOTE: the file describing Bgee species information for release 14_1 was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT. Data will not be redownloaded.
 #> 
-#> Submitting URL to Bgee webservice... (https://r.bgee.org/bgee14_1/?page=r_package&action=get_all_species&display_type=tsv&source=BgeeDB_R_package&source_version=2.16.0)
+#> API key built: 4ac4da2651e3e759ae095c665418573ddb378ad0737c47159bd31a2675995cc2be3cf55ad589e419863fab2a46259dafbc3dfca89d64fdd298c20a6b857fc195
 #> 
-#> Query to Bgee webservice successful!
+#> NOTE: an organ relationships file was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1. Data will not be redownloaded.
 #> 
-#> API key built: 38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f
+#> NOTE: an organ names file was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1. Data will not be redownloaded.
 #> 
-#> Building URLs to retrieve organ relationships from Bgee.........
-#>    URL successfully built (https://r.bgee.org/bgee14_1/?page=r_package&action=get_anat_entity_relations&display_type=tsv&species_list=7955&attr_list=SOURCE_ID&attr_list=TARGET_ID&api_key=38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f&source=BgeeDB_R_package&source_version=2.16.0)
-#>    Submitting URL to Bgee webservice (can be long)
-#>    Got results from Bgee webservice. Files are written in "/Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1"
-#> 
-#> Building URLs to retrieve organ names from Bgee.................
-#>    URL successfully built (https://r.bgee.org/bgee14_1/?page=r_package&action=get_anat_entities&display_type=tsv&species_list=7955&attr_list=ID&attr_list=NAME&api_key=38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f&source=BgeeDB_R_package&source_version=2.16.0)
-#>    Submitting URL to Bgee webservice (can be long)
-#>    Got results from Bgee webservice. Files are written in "/Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1"
-#> 
-#> Building URLs to retrieve mapping of gene to organs from Bgee...
-#>    URL successfully built (https://r.bgee.org/bgee14_1/?page=r_package&action=get_expression_calls&display_type=tsv&species_list=7955&attr_list=GENE_ID&attr_list=ANAT_ENTITY_ID&api_key=38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f&source=BgeeDB_R_package&source_version=2.16.0&data_qual=SILVER)
-#>    Submitting URL to Bgee webservice (can be long)
-#>    Got results from Bgee webservice. Files are written in "/Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1"
+#> NOTE: a gene to organs mapping file was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1. Data will not be redownloaded.
 #> 
 #> Parsing the results.............................................
 #> 
@@ -195,6 +182,12 @@ IdDataFrame
 #> [29,] "UBERON:2007031" "anterior neural rod"
 ```
 
+To run the Shiny app
+
+``` r
+runZooGVT()
+```
+
 Here is the package structure
 
 ## Contributions
@@ -232,6 +225,14 @@ Bioinformatics 21, 3439-3440 (2005).
 Minato Nakazawa (2019). fmsb: Functions for Medical Statistics Book with
 some Demographic Data. R package version 0.7.0.
 <https://CRAN.R-project.org/package=fmsb>
+
+“Learn Shiny.” Shiny, shiny.rstudio.com/tutorial/.
+
+Holtz, Yan. “Basic Radar Chart.” – The R Graph Gallery,
+www.r-graph-gallery.com/142-basic-radar-chart.html.
+
+Holtz, Yan. “Basic Radar Chart.” – The R Graph Gallery,
+www.r-graph-gallery.com/142-basic-radar-chart.html.
 
 ## Acknowledgements
 
