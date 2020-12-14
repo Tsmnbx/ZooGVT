@@ -53,7 +53,7 @@ runZooGVT()
 
 
 Here is the package structure
-```{r include = FALSE}
+```{r}
 print("├── DESCRIPTION
 ├── Danio_rerio_Bgee_14_1
 │   ├── topAnat_AnatEntitiesNames_7955.tsv

@@ -190,6 +190,48 @@ runZooGVT()
 
 Here is the package structure
 
+``` r
+print("├── DESCRIPTION
+├── Danio_rerio_Bgee_14_1
+│   ├── topAnat_AnatEntitiesNames_7955.tsv
+│   ├── topAnat_AnatEntitiesRelationships_7955.tsv
+│   └── topAnat_GeneToAnatEntities_7955_PRESENCESILVER.tsv
+├── LICENSE
+├── LICENSE.md
+├── NAMESPACE
+├── R
+│   ├── GenesFromAnatomy.R
+│   ├── GetUberonIds.R
+│   ├── ListSpecies.R
+│   └── data.R
+├── README.Rmd
+├── README.md
+├── ZooGVT.Rproj
+├── data
+│   └── phyenotypeDescriptions.rda
+├── inst
+│   └── shiny-scripts
+│       └── app.R
+├── man
+│   ├── GenesFromAnatomy.Rd
+│   ├── GetUberonIds.Rd
+│   ├── ListSpecies.Rd
+│   ├── figures
+│   │   └── README-pressure-1.png
+│   └── phyenotypeDescriptions.Rd
+├── release.tsv
+├── species_Bgee_14_1.tsv
+├── tests
+│   ├── testthat
+│   │   ├── release.tsv.tmp
+│   │   └── test-ListSpecies.R
+│   └── testthat.R
+└── vignettes
+    └── Introduction_ZooGVT.Rmd"
+)
+#> [1] "├── DESCRIPTION\n├── Danio_rerio_Bgee_14_1\n│   ├── topAnat_AnatEntitiesNames_7955.tsv\n│   ├── topAnat_AnatEntitiesRelationships_7955.tsv\n│   └── topAnat_GeneToAnatEntities_7955_PRESENCESILVER.tsv\n├── LICENSE\n├── LICENSE.md\n├── NAMESPACE\n├── R\n│   ├── GenesFromAnatomy.R\n│   ├── GetUberonIds.R\n│   ├── ListSpecies.R\n│   └── data.R\n├── README.Rmd\n├── README.md\n├── ZooGVT.Rproj\n├── data\n│   └── phyenotypeDescriptions.rda\n├── inst\n│   └── shiny-scripts\n│       └── app.R\n├── man\n│   ├── GenesFromAnatomy.Rd\n│   ├── GetUberonIds.Rd\n│   ├── ListSpecies.Rd\n│   ├── figures\n│   │   └── README-pressure-1.png\n│   └── phyenotypeDescriptions.Rd\n├── release.tsv\n├── species_Bgee_14_1.tsv\n├── tests\n│   ├── testthat\n│   │   ├── release.tsv.tmp\n│   │   └── test-ListSpecies.R\n│   └── testthat.R\n└── vignettes\n    └── Introduction_ZooGVT.Rmd"
+```
+
 ## Contributions
 
 The *ListSpecies* Function uses the BgeeDB package. The *GetUberonIds*
