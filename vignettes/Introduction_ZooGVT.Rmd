@@ -1,8 +1,11 @@
 ---
-title: "Introduction_ZooGVT"
+title: "An to Introduction ZooGVT"
 author: "Joshua Efe"
 output: 
-  rmarkdown::html_vignette
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: false
+  
 vignette: >
   %\VignetteIndexEntry{A tour of ZooGVT}
   %\VignetteEngine{knitr::rmarkdown}
@@ -17,11 +20,20 @@ knitr::opts_chunk$set(
 )
 ```
 
+##Introduction
 
+ZooGVT allows a user to see what Phenotype descriptions have how many genes associated with them from the DgeeDb database
+
+Use the following to download
 
 ```{r setup}
+require("devtools")
+devtools::install_github("Tsmnbx/ZooGVT", build_vignettes = TRUE)
 library(ZooGVT)
 ```
+
+
+## Components
 
 Here we show the ubronIDS for the phenotype descriptions that we can find for pectoral fin in the zebra Fish
 
@@ -57,4 +69,45 @@ Here we ran the GeneAnatomyParty to get multiple graphs for the different specie
 
 ListofAnimals<-c("Zebrafish","Human")
 GeneAnatomyParty(ListofAnimals,"Cardiac")
+```
+
+## Package References
+
+[Efe, J. (2020) ZooGVT: A R Package For
+  BCB410H. Unpublished.](https://github.com/Tsmnbx/ZooGVT)
+
+<br>
+
+## Other References
+
+R Core Team (2020). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. https://www.R-project.org/
+
+Bastian F et al. (2008). Bgee: Integrating and Comparing Heterogeneous
+Transcriptome Data Among Species. Data Integration Life Sci. Lecture Notes
+in Computer Science, 5109, 124-31
+
+
+Martin Morgan (2019). BiocManager: Access the Bioconductor Project Package
+Repository. R package version 1.30.10.
+https://CRAN.R-project.org/package=BiocManager
+
+Mapping identifiers for the integration of genomic datasets with the
+  R/Bioconductor package biomaRt. Steffen Durinck, Paul T. Spellman, Ewan
+  Birney and Wolfgang Huber, Nature Protocols 4, 1184-1191 (2009).
+
+BioMart and Bioconductor: a powerful link between biological databases
+and microarray data analysis. Steffen Durinck, Yves Moreau, Arek
+Kasprzyk, Sean Davis, Bart De Moor, Alvis Brazma and Wolfgang Huber,
+Bioinformatics 21, 3439-3440 (2005).
+  
+  
+ Minato Nakazawa (2019). fmsb: Functions for Medical Statistics Book
+  with some Demographic Data. R package version 0.7.0.
+  https://CRAN.R-project.org/package=fmsb
+  
+  
+----
+
+```{r}
+sessionInfo()
 ```

@@ -47,7 +47,7 @@ IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> 
 #> NOTE: the file describing Bgee species information for release 14_1 was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT. Data will not be redownloaded.
 #> 
-#> API key built: 4ac4da2651e3e759ae095c665418573ddb378ad0737c47159bd31a2675995cc2be3cf55ad589e419863fab2a46259dafbc3dfca89d64fdd298c20a6b857fc195
+#> API key built: 38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f
 #> 
 #> NOTE: an organ relationships file was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1. Data will not be redownloaded.
 #> 
@@ -193,9 +193,9 @@ Here is the package structure
 ## Contributions
 
 The *ListSpecies* Function uses the BgeeDB package. The *GetUberonIds*
-function also made use of the BgeeDB function as well as the biomaRt for
-access to Ensembl. *GenesFromAnatomy* used all of these plus fmsb to
-produce a radar graph.
+function also made use of the BgeeDB package which uses topGO as well as
+the biomaRt for access to Ensembl. *GenesFromAnatomy* used all of these
+plus fmsb to produce a radar graph.
 
 ## References
 
@@ -226,13 +226,22 @@ Minato Nakazawa (2019). fmsb: Functions for Medical Statistics Book with
 some Demographic Data. R package version 0.7.0.
 <https://CRAN.R-project.org/package=fmsb>
 
+Adrian Alexa and Jorg Rahnenfuhrer (2020). topGO: Enrichment Analysis
+for Gene Ontology. R package version 2.42.0.
+
+R Core Team (2020). R: A language and environment for statistical
+computing. R Foundation for Statistical Computing, Vienna, Austria. URL
+<https://www.R-project.org/>.
+
 “Learn Shiny.” Shiny, shiny.rstudio.com/tutorial/.
 
 Holtz, Yan. “Basic Radar Chart.” – The R Graph Gallery,
 www.r-graph-gallery.com/142-basic-radar-chart.html.
 
-Holtz, Yan. “Basic Radar Chart.” – The R Graph Gallery,
-www.r-graph-gallery.com/142-basic-radar-chart.html.
+Andrea Komljenovic, Julien Roux. BgeeDB, an R Package for Retrieval of
+Curated Expression Datasets and for Gene List Enrichment Tests, 27
+Oct. 2020,
+bioconductor.org/packages/release/bioc/vignettes/BgeeDB/inst/doc/BgeeDB\_Manual.html.
 
 ## Acknowledgements
 

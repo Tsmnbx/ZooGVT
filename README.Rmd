@@ -100,7 +100,7 @@ print("├── DESCRIPTION
 
 ## Contributions
 
-The *ListSpecies* Function uses the BgeeDB package. The *GetUberonIds* function also made use of the BgeeDB function as well as the biomaRt for access to Ensembl. *GenesFromAnatomy* used all of these plus fmsb to produce a radar graph.
+The *ListSpecies* Function uses the BgeeDB package. The *GetUberonIds* function also made use of the BgeeDB package which uses topGO as well as the biomaRt for access to Ensembl. *GenesFromAnatomy* used all of these plus fmsb to produce a radar graph.
 
 
 
@@ -131,16 +131,21 @@ Kasprzyk, Sean Davis, Bart De Moor, Alvis Brazma and Wolfgang Huber,
 Bioinformatics 21, 3439-3440 (2005).
   
   
- Minato Nakazawa (2019). fmsb: Functions for Medical Statistics Book
+Minato Nakazawa (2019). fmsb: Functions for Medical Statistics Book
   with some Demographic Data. R package version 0.7.0.
   https://CRAN.R-project.org/package=fmsb
+  
+Adrian Alexa and Jorg Rahnenfuhrer (2020). topGO: Enrichment Analysis for Gene Ontology. R package
+  version 2.42.0.
+
+R Core Team (2020). R: A language and environment for statistical computing. R Foundation for
+  Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.  
 
 “Learn Shiny.” Shiny, shiny.rstudio.com/tutorial/.
 
 Holtz, Yan. “Basic Radar Chart.” – The R Graph Gallery, www.r-graph-gallery.com/142-basic-radar-chart.html.
 
-
-Holtz, Yan. “Basic Radar Chart.” – The R Graph Gallery, www.r-graph-gallery.com/142-basic-radar-chart.html.
+Andrea Komljenovic, Julien Roux. BgeeDB, an R Package for Retrieval of Curated Expression Datasets and for Gene List Enrichment Tests, 27 Oct. 2020, bioconductor.org/packages/release/bioc/vignettes/BgeeDB/inst/doc/BgeeDB_Manual.html.
 
 ## Acknowledgements
 
