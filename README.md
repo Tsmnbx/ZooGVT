@@ -44,15 +44,28 @@ IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> 
 #> Querying Bgee to get release information...
 #> 
-#> NOTE: the file describing Bgee species information for release 14_2 was found in the download directory /Users/joshuaefe/Documents/tempZOO/ZooGVT. Data will not be redownloaded.
+#> Building URL to query species in Bgee release 14_2...
+#> 
+#> Submitting URL to Bgee webservice... (https://r.bgee.org/bgee14_2/?page=r_package&action=get_all_species&display_type=tsv&source=BgeeDB_R_package&source_version=2.16.0)
+#> 
+#> Query to Bgee webservice successful!
 #> 
 #> API key built: 38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f
 #> 
-#> NOTE: an organ relationships file was found in the download directory /Users/joshuaefe/Documents/tempZOO/ZooGVT/Danio_rerio_Bgee_14_2. Data will not be redownloaded.
+#> Building URLs to retrieve organ relationships from Bgee.........
+#>    URL successfully built (https://r.bgee.org/bgee14_2/?page=r_package&action=get_anat_entity_relations&display_type=tsv&species_list=7955&attr_list=SOURCE_ID&attr_list=TARGET_ID&api_key=38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f&source=BgeeDB_R_package&source_version=2.16.0)
+#>    Submitting URL to Bgee webservice (can be long)
+#>    Got results from Bgee webservice. Files are written in "/Users/joshuaefe/Documents/tempZOO/ZooGVT/Danio_rerio_Bgee_14_2"
 #> 
-#> NOTE: an organ names file was found in the download directory /Users/joshuaefe/Documents/tempZOO/ZooGVT/Danio_rerio_Bgee_14_2. Data will not be redownloaded.
+#> Building URLs to retrieve organ names from Bgee.................
+#>    URL successfully built (https://r.bgee.org/bgee14_2/?page=r_package&action=get_anat_entities&display_type=tsv&species_list=7955&attr_list=ID&attr_list=NAME&api_key=38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f&source=BgeeDB_R_package&source_version=2.16.0)
+#>    Submitting URL to Bgee webservice (can be long)
+#>    Got results from Bgee webservice. Files are written in "/Users/joshuaefe/Documents/tempZOO/ZooGVT/Danio_rerio_Bgee_14_2"
 #> 
-#> NOTE: a gene to organs mapping file was found in the download directory /Users/joshuaefe/Documents/tempZOO/ZooGVT/Danio_rerio_Bgee_14_2. Data will not be redownloaded.
+#> Building URLs to retrieve mapping of gene to organs from Bgee...
+#>    URL successfully built (https://r.bgee.org/bgee14_2/?page=r_package&action=get_expression_calls&display_type=tsv&species_list=7955&attr_list=GENE_ID&attr_list=ANAT_ENTITY_ID&api_key=38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f&source=BgeeDB_R_package&source_version=2.16.0&data_qual=SILVER)
+#>    Submitting URL to Bgee webservice (can be long)
+#>    Got results from Bgee webservice. Files are written in "/Users/joshuaefe/Documents/tempZOO/ZooGVT/Danio_rerio_Bgee_14_2"
 #> 
 #> Parsing the results.............................................
 #> 
@@ -60,7 +73,6 @@ IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> 
 #> Done.
 #> [1] "Danio_rerio"
-#> Ensembl site unresponsive, trying asia mirror
 #> [1] "drerio_gene_ensembl"
 #> ENSDARG00000020201 ENSDARG00000012892 ENSDARG00000008788 ENSDARG00000013174 
 #>                  0                  0                  0                  0 
