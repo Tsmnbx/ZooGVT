@@ -1,3 +1,24 @@
+#' Converts a name into into the correct format
+#'
+#' This function takes a name and matches it to a species
+#' @source \url{http://bioconductor.org/packages/release/bioc/vignettes/BgeeDB/inst/doc/BgeeDB_Manual.html}
+#'
+#' @param name the name a user has inputed
+#'
+#' @return the name the fuctions in this package use to refer to that animal
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#'Species <-GenesFromAnatomy("Danio_rerio")
+#'}
+#' @import fmsb
+#' @import BgeeDB
+#' @import biomaRt
+#' @import topGO
+#' @import grDevices
+#' @importFrom utils head
+
 getRelevantNameVector<-function(name){
   indexComm<-match(name,Species$Common_Name)
   indexSci<-match(name,Species$Scientific_Name)
