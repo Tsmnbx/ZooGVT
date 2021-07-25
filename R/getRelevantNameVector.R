@@ -5,7 +5,7 @@
 #'
 #' @param name the name a user has inputed
 #'
-#' @return the name the fuctions in this package use to refer to that animal
+#' @return the name the functions in this package use to refer to that animal
 #' @export
 #'
 #' @examples

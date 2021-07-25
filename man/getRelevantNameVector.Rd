@@ -13,7 +13,7 @@ getRelevantNameVector(name)
 \item{name}{the name a user has inputed}
 }
 \value{
-the name the fuctions in this package use to refer to that animal
+the name the functions in this package use to refer to that animal
 }
 \description{
 This function takes a name and matches it to a species
