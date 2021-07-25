@@ -4,7 +4,6 @@
 # ZooGVT
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 The goal of ZooGVT is to visualize and understand what genes give rise
@@ -45,15 +44,28 @@ IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> 
 #> Querying Bgee to get release information...
 #> 
-#> NOTE: the file describing Bgee species information for release 14_1 was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT. Data will not be redownloaded.
+#> Building URL to query species in Bgee release 14_2...
+#> 
+#> Submitting URL to Bgee webservice... (https://r.bgee.org/bgee14_2/?page=r_package&action=get_all_species&display_type=tsv&source=BgeeDB_R_package&source_version=2.16.0)
+#> 
+#> Query to Bgee webservice successful!
 #> 
 #> API key built: 38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f
 #> 
-#> NOTE: an organ relationships file was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1. Data will not be redownloaded.
+#> Building URLs to retrieve organ relationships from Bgee.........
+#>    URL successfully built (https://r.bgee.org/bgee14_2/?page=r_package&action=get_anat_entity_relations&display_type=tsv&species_list=7955&attr_list=SOURCE_ID&attr_list=TARGET_ID&api_key=38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f&source=BgeeDB_R_package&source_version=2.16.0)
+#>    Submitting URL to Bgee webservice (can be long)
+#>    Got results from Bgee webservice. Files are written in "/Users/joshuaefe/Documents/tempZOO/ZooGVT/Danio_rerio_Bgee_14_2"
 #> 
-#> NOTE: an organ names file was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1. Data will not be redownloaded.
+#> Building URLs to retrieve organ names from Bgee.................
+#>    URL successfully built (https://r.bgee.org/bgee14_2/?page=r_package&action=get_anat_entities&display_type=tsv&species_list=7955&attr_list=ID&attr_list=NAME&api_key=38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f&source=BgeeDB_R_package&source_version=2.16.0)
+#>    Submitting URL to Bgee webservice (can be long)
+#>    Got results from Bgee webservice. Files are written in "/Users/joshuaefe/Documents/tempZOO/ZooGVT/Danio_rerio_Bgee_14_2"
 #> 
-#> NOTE: a gene to organs mapping file was found in the download directory /Users/joshuaefe/Documents/COURSES_FALL_2020/BCB410/Package/ZooGVT/Danio_rerio_Bgee_14_1. Data will not be redownloaded.
+#> Building URLs to retrieve mapping of gene to organs from Bgee...
+#>    URL successfully built (https://r.bgee.org/bgee14_2/?page=r_package&action=get_expression_calls&display_type=tsv&species_list=7955&attr_list=GENE_ID&attr_list=ANAT_ENTITY_ID&api_key=38de08b817d9692a0b7b6af33a0f4d41f7e6d7a932742446063b9e181664fe25b6274fd73369b6db4dca591449aa87168475489061073e776aa104c47ea0b90f&source=BgeeDB_R_package&source_version=2.16.0&data_qual=SILVER)
+#>    Submitting URL to Bgee webservice (can be long)
+#>    Got results from Bgee webservice. Files are written in "/Users/joshuaefe/Documents/tempZOO/ZooGVT/Danio_rerio_Bgee_14_2"
 #> 
 #> Parsing the results.............................................
 #> 
@@ -64,7 +76,7 @@ IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> [1] "drerio_gene_ensembl"
 #> ENSDARG00000020201 ENSDARG00000012892 ENSDARG00000008788 ENSDARG00000013174 
 #>                  0                  0                  0                  0 
-#> ENSDARG00000021899 ENSDARG00000037429 
+#> ENSDARG00000021899 ENSDARG00000022045 
 #>                  0                  0 
 #> Levels: 0 1
 #> 
@@ -72,23 +84,23 @@ IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> 
 #> Checking gene list......................
 #> 
-#> WARNING: Some genes in your gene list have no expression data in Bgee, and will not be included in the analysis. 4008 genes in background will be kept.
+#> WARNING: Some genes in your gene list have no expression data in Bgee, and will not be included in the analysis. 4329 genes in background will be kept.
 #> 
-#> Building most specific Ontology terms...  (  1191  Ontology terms found. )
+#> Building most specific Ontology terms...  (  1199  Ontology terms found. )
 #> 
-#> Building DAG topology...................  (  2055  Ontology terms and  3917  relations. )
+#> Building DAG topology...................  (  2064  Ontology terms and  3955  relations. )
 #> 
 #> Attaching package: 'SparseM'
 #> The following object is masked from 'package:base':
 #> 
 #>     backsolve
 #> 
-#> Annotating nodes (Can be long)..........  (  4008  genes annotated to the Ontology terms. )
+#> Annotating nodes (Can be long)..........  (  4329  genes annotated to the Ontology terms. )
 #> [1] "After topObj"
 #> 
 #>           -- Weight Algorithm -- 
 #> 
-#>       The algorithm is scoring 1020 nontrivial nodes
+#>       The algorithm is scoring 1027 nontrivial nodes
 #>       parameters: 
 #>           test statistic: fisher : ratio
 #> 
@@ -116,15 +128,15 @@ IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> 
 #>   Level 16:  43 nodes to be scored.
 #> 
-#>   Level 15:  68 nodes to be scored.
+#>   Level 15:  70 nodes to be scored.
 #> 
-#>   Level 14:  63 nodes to be scored.
+#>   Level 14:  64 nodes to be scored.
 #> 
-#>   Level 13:  76 nodes to be scored.
+#>   Level 13:  77 nodes to be scored.
 #> 
-#>   Level 12:  97 nodes to be scored.
+#>   Level 12:  99 nodes to be scored.
 #> 
-#>   Level 11:  120 nodes to be scored.
+#>   Level 11:  121 nodes to be scored.
 #> 
 #>   Level 10:  114 nodes to be scored.
 #> 
@@ -136,50 +148,54 @@ IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> 
 #>   Level 6:   44 nodes to be scored.
 #> 
-#>   Level 5:   27 nodes to be scored.
+#>   Level 5:   29 nodes to be scored.
 #> 
 #>   Level 4:   20 nodes to be scored.
 #> 
 #>   Level 3:   6 nodes to be scored.
 #> 
-#>   Level 2:   4 nodes to be scored.
+#>   Level 2:   2 nodes to be scored.
 #> 
 #>   Level 1:   1 nodes to be scored.
 #> 
-#> Building the results table for the 29 significant terms at FDR threshold of 0.01...
+#> Building the results table for the 33 significant terms at FDR threshold of 0.01...
 #> Ordering results by pValue column in increasing order...
 #> Done
 IdDataFrame
 #>       UBERONids        AnatFeature                      
 #>  [1,] "UBERON:0000151" "pectoral fin"                   
 #>  [2,] "UBERON:0004357" "paired limb/fin bud"            
-#>  [3,] "UBERON:2000040" "median fin fold"                
-#>  [4,] "UBERON:0003051" "ear vesicle"                    
+#>  [3,] "UBERON:0003051" "ear vesicle"                    
+#>  [4,] "UBERON:2000040" "median fin fold"                
 #>  [5,] "UBERON:0003933" "cranial cartilage"              
 #>  [6,] "UBERON:0005729" "pectoral appendage field"       
 #>  [7,] "UBERON:0003406" "cartilage of respiratory system"
-#>  [8,] "UBERON:0004376" "fin bone"                       
-#>  [9,] "UBERON:0001042" "chordate pharynx"               
-#> [10,] "UBERON:0003108" "suspensorium"                   
-#> [11,] "UBERON:0002539" "pharyngeal arch"                
+#>  [8,] "UBERON:0001042" "chordate pharynx"               
+#>  [9,] "UBERON:0003108" "suspensorium"                   
+#> [10,] "UBERON:0002539" "pharyngeal arch"                
+#> [11,] "UBERON:0004376" "fin bone"                       
 #> [12,] "UBERON:0004756" "dermal skeletal element"        
 #> [13,] "UBERON:0003128" "cranium"                        
-#> [14,] "UBERON:0006068" "bone of tail"                   
-#> [15,] "UBERON:0004375" "bone of free limb or fin"       
-#> [16,] "UBERON:0008895" "splanchnocranium"               
-#> [17,] "UBERON:0000089" "hypoblast (generic)"            
-#> [18,] "UBERON:0010312" "immature eye"                   
-#> [19,] "UBERON:0001003" "skin epidermis"                 
-#> [20,] "UBERON:0000926" "mesoderm"                       
-#> [21,] "UBERON:0002514" "intramembranous bone"           
-#> [22,] "UBERON:0002616" "regional part of brain"         
-#> [23,] "UBERON:0010363" "endochondral element"           
+#> [14,] "UBERON:0001003" "skin epidermis"                 
+#> [15,] "UBERON:0006068" "bone of tail"                   
+#> [16,] "UBERON:0004750" "blastoderm"                     
+#> [17,] "UBERON:0004375" "bone of free limb or fin"       
+#> [18,] "UBERON:0008895" "splanchnocranium"               
+#> [19,] "UBERON:0000926" "mesoderm"                       
+#> [20,] "UBERON:0010312" "immature eye"                   
+#> [21,] "UBERON:0002541" "germ ring"                      
+#> [22,] "UBERON:0002514" "intramembranous bone"           
+#> [23,] "UBERON:0013754" "integumentary system layer"     
 #> [24,] "UBERON:4000163" "anal fin"                       
-#> [25,] "UBERON:2000555" "opercular flap"                 
-#> [26,] "UBERON:4000170" "median fin skeleton"            
-#> [27,] "UBERON:0002541" "germ ring"                      
-#> [28,] "UBERON:2007029" "hindbrain neural keel"          
-#> [29,] "UBERON:2007031" "anterior neural rod"
+#> [25,] "UBERON:0010363" "endochondral element"           
+#> [26,] "UBERON:0012275" "meso-epithelium"                
+#> [27,] "UBERON:0002616" "regional part of brain"         
+#> [28,] "UBERON:2000555" "opercular flap"                 
+#> [29,] "UBERON:4000170" "median fin skeleton"            
+#> [30,] "UBERON:0002533" "post-anal tail bud"             
+#> [31,] "UBERON:2007029" "hindbrain neural keel"          
+#> [32,] "UBERON:2007031" "anterior neural rod"            
+#> [33,] "UBERON:0003055" "periderm"
 ```
 
 To run the Shiny app
