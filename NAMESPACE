@@ -2,10 +2,10 @@
 
 export(GeneAnatomyParty)
 export(GenesFromAnatomy)
+export(GetNamesVec)
 export(GetUberonIds)
 export(ListPhenotypesDescriptions)
 export(ListSpecies)
-export(getRelevantNameVector)
 export(runZooGVT)
 import(BgeeDB)
 import(biomaRt)

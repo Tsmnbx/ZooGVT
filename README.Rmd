@@ -35,36 +35,46 @@ The development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("Tsmnbx/ZooGVT")
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
+#May also need to do the below
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
 
-BiocManager::install("topGO")
+#BiocManager::install("topGO")
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
 
-BiocManager::install("biomaRt")
+#BiocManager::install("biomaRt")
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
 
-BiocManager::install("BgeeDB")
+#BiocManager::install("BgeeDB")
 
-library(topGO)
-library(biomaRt)
-library(BgeeDB)
+#library(topGO)
+#library(biomaRt)
+#library(BgeeDB)
 ```
 ## Example
 
 This is a basic example which shows the UBERONids on could get for a Zebra fish with the descriptor "pectoral fin":
 
-```{r example}
+```{r}
 library(ZooGVT)
-#BiocManager::install("topGO")
+
 
 IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 IdDataFrame
 ```
+
+
+This is a function that allows puts species wwritten in the correct format for this package:
+
+```{r}
+library(ZooGVT)
+NameVec<-GetNamesVec("Danio_rerio")
+```
+
 To run the Shiny app
 ```{r eval=FALSE}
 runZooGVT()

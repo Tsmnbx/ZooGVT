@@ -25,6 +25,17 @@ Use the following to download
 ```{r setup}
 require("devtools")
 devtools::install_github("Tsmnbx/ZooGVT")
+
+
+library(ZooGVT)
+```
+
+You will also have to download the following from BiocManager 
+```{r eval=FALSE}
+
+#You will also have to download the following from BiocManager 
+require("devtools")
+devtools::install_github("Tsmnbx/ZooGVT")
 #You will also have to download the following from BiocManager 
 
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -47,27 +58,33 @@ library(biomaRt)
 library(BgeeDB)
 library(ZooGVT)
 ```
-
 ## Components
 
 Here we show the ubronIDS for the phenotype descriptions that we can find for pectoral fin in the zebra Fish
 
 ```{r}
+library(ZooGVT)
 IdDataFrame<-GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 IdDataFrame
 ```
 
+This is a function that allows puts species wwritten in the correct format for this package:
+
+```{r eval=FALSE}
+library(ZooGVT)
+NamesSpec<-GetNamesVec("Danio_rerio")
+```
 
 To see what Species we can use for this package that are both in BgeeDB and have phenotype descriptions in  ensembl as both are required run ListSpecies()
 ```{r}
-
+library(ZooGVT)
 ListSpecies()
 ```
 
 
 To see what phenotype descriptions from ensembl are available and what could be used for the feature parameter run ListPhenotypesDescriptions()
 ```{r}
-
+library(ZooGVT)
 ListPhenotypesDescriptions()
 ```
 
@@ -81,7 +98,7 @@ AnatomyGeneRadarGraph <-GenesFromAnatomy("Danio_rerio","Zebrafish","pectoral fin
 
 Here we ran the GeneAnatomyParty to get multiple graphs for the different species for the same feature. Its tricky you have to have an feature that is just precise enough to get good results
 ```{r eval=FALSE}
-
+library(ZooGVT)
 ListofAnimals<-c("Zebrafish","Human")
 GeneAnatomyParty(ListofAnimals,"Cardiac")
 ```
