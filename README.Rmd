@@ -31,9 +31,28 @@ ZooGVT allows users to visualize the various anatomical features related to a se
 
 The development version from [GitHub](https://github.com/) with:
 
-``` r
+``` {r}
 # install.packages("devtools")
 devtools::install_github("Tsmnbx/ZooGVT")
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("topGO")
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("biomaRt")
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("BgeeDB")
+
+library(topGO)
+library(biomaRt)
+library(BgeeDB)
 ```
 ## Example
 

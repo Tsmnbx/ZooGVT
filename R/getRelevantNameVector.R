@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' \dontrun{
-#'Species <-GenesFromAnatomy("Danio_rerio")
+#'Species <-getRelevantNameVector("Danio_rerio")
 #'}
 #' @import fmsb
 #' @import BgeeDB
@@ -19,7 +19,7 @@
 #' @import grDevices
 #' @importFrom utils head
 
-GetRelevantNameVector<-function(name){
+getRelevantNameVector<-function(name){
   indexComm<-match(name,Species$Common_Name)
   indexSci<-match(name,Species$Scientific_Name)
   names<-c()

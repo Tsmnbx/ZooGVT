@@ -25,6 +25,26 @@ Use the following to download
 ```{r setup}
 require("devtools")
 devtools::install_github("Tsmnbx/ZooGVT")
+#You will also have to download the following from BiocManager 
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("topGO")
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("biomaRt")
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("BgeeDB")
+
+library(topGO)
+library(biomaRt)
+library(BgeeDB)
 library(ZooGVT)
 ```
 
