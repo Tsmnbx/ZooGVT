@@ -40,7 +40,7 @@ server <- function(input, output) {
 
     output$radar <- renderPlot({
       print("is it here")
-      nameList<-getRelevantNameVector(as.character(input$select))
+      nameList<-GetRelevantNameVector(as.character(input$select))
       title <- "Pheyotype Features"
       GenesFromAnatomy(nameList[2],nameList[1], input$Feature)
     })

@@ -26,7 +26,7 @@
 GeneAnatomyParty<-function(listOfSpecies, feature){
   for (i in seq(along = listOfSpecies)){
     species<-listOfSpecies[i]
-    nameVector<-getRelevantNameVector(species)
+    nameVector<-GetRelevantNameVector(species)
     common<-nameVector[1]
     sci<-nameVector[2]
     plot<-GenesFromAnatomy(sci, common, feature)

@@ -19,7 +19,7 @@
 #' @import grDevices
 #' @importFrom utils head
 
-getRelevantNameVector<-function(name){
+GetRelevantNameVector<-function(name){
   indexComm<-match(name,Species$Common_Name)
   indexSci<-match(name,Species$Scientific_Name)
   names<-c()
