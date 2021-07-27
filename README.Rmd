@@ -80,6 +80,33 @@ To run the Shiny app
 runZooGVT()
 ```
 
+If you get the following error "[1] "is it here"
+Warning: Error in GetNamesVec: could not find function "GetNamesVec""
+run this code to run the shiney app
+
+```{r eval=FALSE}
+GetNamesVec<-function(name){
+  indexComm<-match(name,ZooGVT::Species$Common_Name)
+  indexSci<-match(name,ZooGVT::Species$Scientific_Name)
+  names<-c()
+
+  if(is.na(indexComm)== FALSE){
+    index<-indexComm
+    names<-append(names,ZooGVT::Species$Common_Name[index])
+    names<-append(names,ZooGVT::Species$Scientific_Name[index])
+    return(names)
+  }
+
+  if(is.na(indexSci)== FALSE){
+    index<-indexSci
+    names<-append(names,ZooGVT::Species$Common_Name[index])
+    names<-append(names,ZooGVT::Species$Scientific_Name[index])
+    return(names)
+  }
+
+}
+```
+
 
 Here is the package structure
 ```{r}

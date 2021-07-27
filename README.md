@@ -28,132 +28,38 @@ The development version from [GitHub](https://github.com/) with:
 devtools::install_github("Tsmnbx/ZooGVT")
 #> Downloading GitHub repo Tsmnbx/ZooGVT@HEAD
 #> Skipping 3 packages not available: topGO, biomaRt, BgeeDB
-#>      checking for file ‘/private/var/folders/mh/gcs_71797dx5nslkdhs3dnw00000gn/T/RtmpcGT6U0/remotesa19f16d851c9/Tsmnbx-ZooGVT-b7b8828/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/mh/gcs_71797dx5nslkdhs3dnw00000gn/T/RtmpcGT6U0/remotesa19f16d851c9/Tsmnbx-ZooGVT-b7b8828/DESCRIPTION’
+#>      checking for file ‘/private/var/folders/mh/gcs_71797dx5nslkdhs3dnw00000gn/T/RtmpkriehO/remotese164f25e6d1/Tsmnbx-ZooGVT-847cccb/DESCRIPTION’ ...  ✓  checking for file ‘/private/var/folders/mh/gcs_71797dx5nslkdhs3dnw00000gn/T/RtmpkriehO/remotese164f25e6d1/Tsmnbx-ZooGVT-847cccb/DESCRIPTION’
 #>   ─  preparing ‘ZooGVT’:
 #>      checking DESCRIPTION meta-information ...  ✓  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
 #>   ─  checking for empty or unneeded directories
 #>        NB: this package now depends on R (>= 3.5.0)
 #>        WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects: ‘ZooGVT/data/Species.rda’  ‘ZooGVT/data/phyenotypeDescriptions.rda’
-#> ─  building ‘ZooGVT_0.0.0.9000.tar.gz’
+#>   ─  building ‘ZooGVT_0.0.0.9000.tar.gz’
 #>      
 #> 
-#> Installing package into '/private/var/folders/mh/gcs_71797dx5nslkdhs3dnw00000gn/T/Rtmp4lmxK3/temp_libpath79d77fd2056b'
+#> Installing package into '/private/var/folders/mh/gcs_71797dx5nslkdhs3dnw00000gn/T/Rtmp4lmxK3/temp_libpath79d77767e809'
 #> (as 'lib' is unspecified)
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
+#May also need to do the below
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
 
-BiocManager::install("topGO")
-#> 'getOption("repos")' replaces Bioconductor standard repositories, see
-#> '?repositories' for details
-#> 
-#> replacement repositories:
-#>     CRAN: https://cran.rstudio.com/
-#> Bioconductor version 3.12 (BiocManager 1.30.16), R 4.0.2 (2020-06-22)
-#> Warning: package(s) not installed when version(s) same as current; use `force = TRUE` to
-#>   re-install: 'topGO'
-#> Old packages: 'jpeg', 'utf8'
+#BiocManager::install("topGO")
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
 
-BiocManager::install("biomaRt")
-#> 'getOption("repos")' replaces Bioconductor standard repositories, see
-#> '?repositories' for details
-#> 
-#> replacement repositories:
-#>     CRAN: https://cran.rstudio.com/
-#> 
-#> Bioconductor version 3.12 (BiocManager 1.30.16), R 4.0.2 (2020-06-22)
-#> Warning: package(s) not installed when version(s) same as current; use `force = TRUE` to
-#>   re-install: 'biomaRt'
-#> Old packages: 'jpeg', 'utf8'
+#BiocManager::install("biomaRt")
 
-if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
+#if (!requireNamespace("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
 
-BiocManager::install("BgeeDB")
-#> 'getOption("repos")' replaces Bioconductor standard repositories, see
-#> '?repositories' for details
-#> 
-#> replacement repositories:
-#>     CRAN: https://cran.rstudio.com/
-#> 
-#> Bioconductor version 3.12 (BiocManager 1.30.16), R 4.0.2 (2020-06-22)
-#> Warning: package(s) not installed when version(s) same as current; use `force = TRUE` to
-#>   re-install: 'BgeeDB'
-#> Old packages: 'jpeg', 'utf8'
+#BiocManager::install("BgeeDB")
 
-library(topGO)
-#> Warning: package 'topGO' was built under R version 4.0.3
-#> Loading required package: BiocGenerics
-#> Warning: package 'BiocGenerics' was built under R version 4.0.5
-#> Loading required package: parallel
-#> 
-#> Attaching package: 'BiocGenerics'
-#> The following objects are masked from 'package:parallel':
-#> 
-#>     clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
-#>     clusterExport, clusterMap, parApply, parCapply, parLapply,
-#>     parLapplyLB, parRapply, parSapply, parSapplyLB
-#> The following objects are masked from 'package:stats':
-#> 
-#>     IQR, mad, sd, var, xtabs
-#> The following objects are masked from 'package:base':
-#> 
-#>     anyDuplicated, append, as.data.frame, basename, cbind, colnames,
-#>     dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
-#>     grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
-#>     order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
-#>     rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
-#>     union, unique, unsplit, which.max, which.min
-#> Loading required package: graph
-#> Warning: package 'graph' was built under R version 4.0.3
-#> Loading required package: Biobase
-#> Warning: package 'Biobase' was built under R version 4.0.3
-#> Welcome to Bioconductor
-#> 
-#>     Vignettes contain introductory material; view with
-#>     'browseVignettes()'. To cite Bioconductor, see
-#>     'citation("Biobase")', and for packages 'citation("pkgname")'.
-#> Loading required package: GO.db
-#> Loading required package: AnnotationDbi
-#> Warning: package 'AnnotationDbi' was built under R version 4.0.3
-#> Loading required package: stats4
-#> Loading required package: IRanges
-#> Warning: package 'IRanges' was built under R version 4.0.3
-#> Loading required package: S4Vectors
-#> Warning: package 'S4Vectors' was built under R version 4.0.3
-#> 
-#> Attaching package: 'S4Vectors'
-#> The following object is masked from 'package:base':
-#> 
-#>     expand.grid
-#> 
-#> Loading required package: SparseM
-#> 
-#> Attaching package: 'SparseM'
-#> The following object is masked from 'package:base':
-#> 
-#>     backsolve
-#> 
-#> groupGOTerms:    GOBPTerm, GOMFTerm, GOCCTerm environments built.
-#> 
-#> Attaching package: 'topGO'
-#> The following object is masked from 'package:IRanges':
-#> 
-#>     members
-library(biomaRt)
-#> Warning: package 'biomaRt' was built under R version 4.0.3
-library(BgeeDB)
-#> Warning: package 'BgeeDB' was built under R version 4.0.3
-#> Loading required package: tidyr
-#> 
-#> Attaching package: 'tidyr'
-#> The following object is masked from 'package:S4Vectors':
-#> 
-#>     expand
+#library(topGO)
+#library(biomaRt)
+#library(BgeeDB)
 ```
 
 ## Example
@@ -163,7 +69,8 @@ Zebra fish with the descriptor “pectoral fin”:
 
 ``` r
 library(ZooGVT)
-#BiocManager::install("topGO")
+#> 
+
 
 IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> 
@@ -188,6 +95,9 @@ IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> Done.
 #> [1] "Danio_rerio"
 #> [1] "drerio_gene_ensembl"
+#> Ensembl site unresponsive, trying useast mirror
+#> Ensembl site unresponsive, trying asia mirror
+#> Ensembl site unresponsive, trying asia mirror
 #> ENSDARG00000020201 ENSDARG00000012892 ENSDARG00000008788 ENSDARG00000013174 
 #>                  0                  0                  0                  0 
 #> ENSDARG00000021899 ENSDARG00000022045 
@@ -203,6 +113,11 @@ IdDataFrame<-ZooGVT::GetUberonIds("Danio_rerio","Zebrafish","pectoral fin")
 #> Building most specific Ontology terms...  (  1199  Ontology terms found. )
 #> 
 #> Building DAG topology...................  (  2064  Ontology terms and  3955  relations. )
+#> 
+#> Attaching package: 'SparseM'
+#> The following object is masked from 'package:base':
+#> 
+#>     backsolve
 #> 
 #> Annotating nodes (Can be long)..........  (  4329  genes annotated to the Ontology terms. )
 #> [1] "After topObj"
@@ -307,10 +222,45 @@ IdDataFrame
 #> [33,] "UBERON:0003055" "periderm"
 ```
 
+This is a function that allows puts species wwritten in the correct
+format for this package:
+
+``` r
+library(ZooGVT)
+NameVec<-GetNamesVec("Danio_rerio")
+```
+
 To run the Shiny app
 
 ``` r
 runZooGVT()
+```
+
+If you get the following error “\[1\]”is it here" Warning: Error in
+GetNamesVec: could not find function “GetNamesVec”" run this code to run
+the shiney app
+
+``` r
+GetNamesVec<-function(name){
+  indexComm<-match(name,ZooGVT::Species$Common_Name)
+  indexSci<-match(name,ZooGVT::Species$Scientific_Name)
+  names<-c()
+
+  if(is.na(indexComm)== FALSE){
+    index<-indexComm
+    names<-append(names,ZooGVT::Species$Common_Name[index])
+    names<-append(names,ZooGVT::Species$Scientific_Name[index])
+    return(names)
+  }
+
+  if(is.na(indexSci)== FALSE){
+    index<-indexSci
+    names<-append(names,ZooGVT::Species$Common_Name[index])
+    names<-append(names,ZooGVT::Species$Scientific_Name[index])
+    return(names)
+  }
+
+}
 ```
 
 Here is the package structure
